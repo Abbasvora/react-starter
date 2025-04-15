@@ -1,8 +1,9 @@
 pipeline {
-    agent any
-    tools{
-        nodejs 'nodejs'
-    }
+    agent { 
+        node {
+            label 'docker-agent-node'
+            }
+      }
     stages {
         stage('Install dependencies') { 
             steps {
