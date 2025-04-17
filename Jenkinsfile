@@ -7,11 +7,8 @@ pipeline {
     stages {
         stage('Install dependencies') { 
             steps {
-                sh '''#!/bin/bash
-                 node -v 
-                '''
-                sh 'npm -v'
-                sh 'npm install' 
+                sh -c 'npm -v'
+                sh -c 'npm install' 
             }
         }
         stage('Build') { 
