@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Install dependencies') { 
             steps {
-                sh -c 'npm -v'
-                sh -c 'npm install' 
+                sh "chmod +x test.sh"
+                sh "./test.sh"
             }
         }
         stage('Build') { 
