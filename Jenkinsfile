@@ -7,13 +7,14 @@ pipeline {
     stages {
         stage('Install dependencies') { 
             steps {
-                sh "chmod +x test.sh"
-                sh "./test.sh"
+                sh "chmod +x install_deps.sh"
+                sh "./install_deps.sh"
             }
         }
         stage('Build') { 
             steps {
-                sh 'npm run build' 
+                sh "chmod +x build.sh"
+                sh "./build.sh"
             }
         }
     }
